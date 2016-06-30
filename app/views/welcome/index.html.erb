@@ -4,9 +4,15 @@
       <a href="#" id="logo">Podcasts-HUB</a>
       <nav>
         <ul>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">Sign Up</a></li>
-          <li><a href="#">Sign In</a></li>
+          <% unless podcast_signed_in? %>
+            <li><a href="#">Explore</a></li>
+            <li><%= link_to "Sign In", new_podcast_session_path %></li>
+            <li><%= link_to "Get Started", new_podcast_registration_path %></li>
+          <% else %>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
+          <% end %>
         </ul>
       </nav>
     </div>
@@ -14,7 +20,7 @@
   <div class="wrapper_skinny">
     <h1>Home for your favorite Podcasts.</h1>
     <h2>Create your free Podcast and your favourites only on Podcasts HUB.</h2>
-    <a href="#" class="button button_highlight">Get Started</a>
-    <a href="#" class="button button_white">Create Podcast</a>
+    <%= link_to "Get Started", new_podcast_registration_path, class: "button button_highlight" %>
+    <a href="#" class="button button_white">Explore</a>
   </div>
 </div>
