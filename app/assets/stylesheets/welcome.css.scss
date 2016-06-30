@@ -1,0 +1,52 @@
+#background {
+  background-image: url("home.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  header {
+    padding: 3rem 0;
+    #logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 2em;
+      color: $white;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+          a {
+            color: $white;
+            font-size: 1.2em;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    color: $white;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0 0 0 0;
+  }
+  h2 {
+    color: $white;
+    font-size: 2.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .button {
+    margin: 1.5em 1% 0 1%;
+  }
+}

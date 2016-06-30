@@ -1,0 +1,159 @@
+ $white: #FFFFFF;
+ $dark: #000000;
+
+ body {
+   font-family: 'Montserrat', sans-serif;
+ }
+
+ .wrapper_wide {
+   width: 90%;
+   margin: 0 auto;
+ }
+
+ .wrapper {
+   width: 80%;
+   margin: 0 auto;
+ }
+
+ .wrapper_skinny {
+   width: 60%;
+   margin: 0 auto;
+ }
+
+ .cf:before, .cf:after {
+   content: " ";
+   display: table;
+ }
+
+ .cf:after {
+   clear: both;
+ }
+
+ .button {
+   text-decoration: none;
+   color: #D30027;
+   font-size: 1rem;
+   font-weight: bold;
+   letter-spacing: 1px;
+   padding: 1rem 2rem;
+   border-radius: 2rem;
+   outline: none;
+   border: none;
+   min-width: 8.5rem;
+ }
+
+ .button_highlight {
+   background: $white;
+   transition: background .1s ease-in-out;
+   border: 2px solid $white;
+   &:hover {
+     background: none;
+     color: $white;
+   }
+ }
+
+ .button_white {
+   letter-spacing: 1px;
+   color: $white;
+   transition: background .1s ease-in-out;
+   border: 2px solid $white;
+   &:hover {
+     color: #D30027;
+     background: $white;
+   }
+ }
+
+ #main_header {
+   color: #d30027;
+   background: $white;
+   padding: 1.5rem 0;
+   #logo {
+     float: left;
+     text-transform: uppercase;
+     font-weight: bolder;
+     font-size: 2em;
+     color: #d30027;
+     text-decoration: none;
+   }
+   nav {
+     float: right;
+     ul {
+       list-style: none;
+       margin: 0;
+       li {
+         display: inline;
+         margin-left: 2.5rem;
+         a {
+           color: $dark;
+           font-size: 1.2em;
+           text-decoration: none;
+         }
+       }
+     }
+   }
+ }
+
+ #banner {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right center;
+   margin-bottom: 2rem;
+   h1 {
+     width: 60%;
+     text-align: left;
+     color: #000000;
+     font-size: 3rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+     margin: 0 auto;
+     padding: 9rem 0;
+   }
+ }
+
+ .vloggers_banner {
+   background-image: url(../images/redcar.jpg);
+ }
+
+ .pagination:before, .pagination:after {
+   content: " ";
+   display: table;
+ }
+
+ .pagination:after {
+   clear: both;
+ }
+
+ .pagination {
+   text-align: center;
+   margin: 1rem 0 5rem 0;
+   a, .previous_page, .current, .next_page {
+     padding: 0.75rem 1rem;
+     margin: 0 .25rem;
+     border-radius: .15rem;
+     line-height: 1.25;
+     text-decoration: none;
+     background-color: #EDEFF5;
+     font-weight: 700;
+     font-size: 0.7rem;
+     font-style: normal;
+     color: $dark;
+     &:hover {
+       background: $dark;
+       color: $white;
+     }
+   }
+   .current {
+     background: $dark;
+     color: $white;
+   }
+   .disabled {
+     color: #C0C0C0;
+     &:hover {
+       color: #C0C0C0;
+     }
+   }
+ }
+
+@import 'normalize';
+@import 'welcome';
+// @import 'vloggers';
