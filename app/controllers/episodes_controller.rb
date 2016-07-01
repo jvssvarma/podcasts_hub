@@ -11,7 +11,7 @@ class EpisodesController < ApplicationController
 	def create
 		@episode = @podcast.episodes.new(episode_params)
 		if @episode.save
-			redirect_to podcast_episode_path(@podcast, @episode)
+			redirect_to podcast_episode_path(@podcast, @episode), notice: "Episode succesfully created!!"
 		else
 			render 'new'
 		end
