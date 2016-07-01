@@ -1,0 +1,26 @@
+<div id="banner_podcasts_index">
+  <h1>Explore podcasts</h1>
+</div>
+
+<div id="podcasts" class="cf">
+  <div class="wrapper">
+    <ul class="cf">
+      <% @podcasts.each do |podcast| %>
+				<%= link_to podcast do %>
+					<li>
+						<div class="podcast_overview">
+							<h2><%= podcast.name %></h2>
+							<p class="episode_count">1 Episode</p>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+    </ul>
+  </div>
+</div>
+<div class="pagination">
+  <span class="previous_page disabled">Previous</span>
+  <em class="current">1</em>
+  <a href="#">2</a>
+  <a class="next_page" href="#">Next</a>
+</div>

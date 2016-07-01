@@ -123,9 +123,40 @@
    }
  }
 
- .podcasts_banner {
-   //background-image: image-url("");
-   margin-bottom: 4rem;
+ #banner {
+   background-image: image-url("redcar.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   margin-bottom: 2rem;
+   h1 {
+     width: 70%;
+     text-align: center;
+     font-size: 3rem;
+     font-weight: lighter;
+     letter-spacing: 1px;
+     margin: 0 auto;
+     padding: 9rem 0;
+     color: #FFFFFF;
+   }
+ }
+
+ #banner_podcasts_index {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: right center;
+   background-image: image-url("redcar.jpg");
+   margin-bottom: 2rem;
+   h1 {
+     width: 60%;
+     text-align: left;
+     color: #000000;
+     font-size: 3rem;
+     font-weight: 300;
+     letter-spacing: 1px;
+     margin: 0 auto;
+     padding: 9rem 0;
+   }
  }
 
  .pagination:before, .pagination:after {
@@ -215,5 +246,5 @@ textarea {
 }
 
 @import 'normalize';
-@import 'welcome';
 @import 'podcasts';
+@import 'welcome';
