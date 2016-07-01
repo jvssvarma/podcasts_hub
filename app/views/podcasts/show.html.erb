@@ -28,9 +28,9 @@
 			<ul class="cf">
 				<% @episodes.each do |episode| %>
 					<li class="cf">
-						<div class="episode_thumbnail">
+						<div class="episode_image">
 							<a href="#">
-								<%= image_tag episode.episode_thumbnail.url(:medium) %>
+								<%= image_tag episode.episode_image.url(:medium) %>
 							</a>
 						</div>
 						<div class="episode_overview">

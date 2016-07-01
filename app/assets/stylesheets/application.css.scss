@@ -30,6 +30,19 @@
    clear: both;
  }
 
+ #notice_wrapper {
+   width: 100%;
+   position: absolute;
+   z-index: 999;
+   p {
+     color: #000000;
+     text-align: center;
+     font-size: 1rem;
+     font-weight: 700;
+     padding: 1.12rem 0;
+   }
+ }
+
  .button {
    text-decoration: none;
    color: #D30027;
@@ -113,6 +126,25 @@
    margin-bottom: 2rem;
    h1 {
      width: 70%;
+     text-align: center;
+     font-size: 3rem;
+     font-weight: lighter;
+     letter-spacing: 1px;
+     margin: 0 auto;
+     padding: 9rem 0;
+     color: #FFFFFF;
+   }
+ }
+
+ #banner_signin {
+   background-image: image-url("signin.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   margin-bottom: 2rem;
+   h1 {
+     width: 70%;
+     vertical-align: top;
      text-align: center;
      font-size: 3rem;
      font-weight: lighter;
@@ -208,10 +240,6 @@
      color: $white;
    }
  }
-
-.sign_in_banner {
-  background-image: image-url("sign_in_banner.jpg");
-}
 
 #form {
   padding: 3rem 3.5%;
