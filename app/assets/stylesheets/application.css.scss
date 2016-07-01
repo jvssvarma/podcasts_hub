@@ -1,5 +1,6 @@
  $white: #FFFFFF;
  $dark: #000000;
+ $light: #EDEFF5;
 
  body {
    font-family: 'Montserrat', sans-serif;
@@ -63,6 +64,17 @@
    }
  }
 
+ .button_submit {
+   background: #C20917;
+   transition: background .1s ease-in-out;
+   border: 2px solid #C20917;
+   color: $white;
+   &:hover {
+     color: #D30027;
+     background: $white;
+   }
+ }
+
  #main_header {
    color: #d30027;
    background: $white;
@@ -93,25 +105,27 @@
    }
  }
 
- #banner {
+ #banner_signup {
+   background-image: image-url("darkstudio.jpg");
    background-repeat: no-repeat;
    background-size: cover;
-   background-position: right center;
+   background-position: center center;
    margin-bottom: 2rem;
    h1 {
-     width: 60%;
-     text-align: left;
-     color: #000000;
+     width: 70%;
+     text-align: center;
      font-size: 3rem;
-     font-weight: 300;
+     font-weight: lighter;
      letter-spacing: 1px;
      margin: 0 auto;
      padding: 9rem 0;
+     color: #FFFFFF;
    }
  }
 
- .vloggers_banner {
-   
+ .podcasts_banner {
+   //background-image: image-url("");
+   margin-bottom: 4rem;
  }
 
  .pagination:before, .pagination:after {
@@ -123,28 +137,34 @@
    clear: both;
  }
 
+ .pagination:before,
+ .pagination:after {
+   content: “ “;
+   display: table;
+ }
+
+ .pagination:after {
+   clear: both;
+ }
+
  .pagination {
    text-align: center;
-   margin: 1rem 0 5rem 0;
+   margin: 2rem 0;
    a, .previous_page, .current, .next_page {
      padding: 0.75rem 1rem;
      margin: 0 .25rem;
      border-radius: .15rem;
-     line-height: 1.25;
+     line-height: 20px;
      text-decoration: none;
-     background-color: #EDEFF5;
+     background-color: $light;
      font-weight: 700;
-     font-size: 0.7rem;
+     font-size: .7rem;
      font-style: normal;
      color: $dark;
      &:hover {
-       background: $dark;
+       background: #D30027;
        color: $white;
      }
-   }
-   .current {
-     background: $dark;
-     color: $white;
    }
    .disabled {
      color: #C0C0C0;
@@ -152,7 +172,47 @@
        color: #C0C0C0;
      }
    }
+   .current {
+     background: #D30027;
+     color: $white;
+   }
  }
+
+.sign_in_banner {
+  background-image: image-url("sign_in_banner.jpg");
+}
+
+#form {
+  padding: 3rem 3.5%;
+  background: $white;
+  border-radius: .35rem;
+  .title {
+    color: $dark;
+    text-align: center;
+  }
+}
+
+.field {
+  margin: .5rem 0 1.5rem 0;
+}
+
+input[type="email"], input[type="text"], input[type="password"], textarea {
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem 1rem;
+  background: $light;
+  border: 1px solid darken($light, 5%);
+  border-radius: .35rem;
+  margin-top: .5rem;
+}
+
+input[type=”file”] {
+  margin-top: .5rem;
+}
+
+textarea {
+  height: 8rem;
+}
 
 @import 'normalize';
 @import 'welcome';
