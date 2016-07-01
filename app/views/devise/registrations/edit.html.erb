@@ -1,17 +1,17 @@
 <div id="podcast_show">
   <div id="show_banner">
     <div class="wrapper_skinny">
-      <h1>The Rocketship Podcast Dashboard</h1>
+      <h1><%= @podcast.name %></h1>
     </div>
   </div>
 
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><a href="#">Episodes</a></li>
-        <li><a href="#">New Episode</a></li>
+        <li class>Episodes</li>
+        <li><%= link_to "New Episode", new_podcast_episode_path(@podcast) %></li>
         <li><%= link_to "Account Settings", edit_podcast_registration_path, class: "current" %></li>
-        <li><a href="#">View Podcast</a></li>
+        <li><%= link_to "View Podcast", podcast_path(current_podcast) %></li>
       </ul>
     </div>
   </div>
@@ -86,6 +86,6 @@
 
     <h3>Cancel my account</h3>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button button_submit" %></p>
   </div>
 </div>
