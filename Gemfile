@@ -12,6 +12,8 @@ gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'paperclip', '< 5.0'
 gem 'aws-sdk', '~> 2.3', '>= 2.3.19'
 gem 'will_paginate', '~> 3.1'
+gem 'fog', '~> 1.38'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   gem 'sqlite3'
